@@ -18,6 +18,9 @@ class YeelightDevice extends Homey.Device {
     yeelights[id].connecting = false;
     yeelights[id].connected = false;
 
+    this.log('Initializing device: "'+ this.getName() +'" of model "'+ this.getData().model + '" with capabilities:');
+    this.log(this.getCapabilities());
+
     // FILL TEMP DEVICES FOR PAIRING
     yeelight.fillAddedDevices();
 
