@@ -52,6 +52,8 @@ class YeelightDriver extends Homey.Driver {
   onPairListDevices (data, callback) {
     yeelight.discover()
       .then(result => {
+        console.log('Discovered devices:');
+        console.log(result);
         let devices = [];
         for (let i in result) {
           if(result[i].model.startsWith('color')) {
